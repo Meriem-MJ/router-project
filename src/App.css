@@ -1,0 +1,15 @@
+*{
+  background-color: #282c34;
+  color: white;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  font-size: 30px;
+}
+ul{
+  list-style: none;
+}
+
