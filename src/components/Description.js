@@ -5,7 +5,7 @@ import { moviesList } from '../assets/mookData';
 
 
 const Description = ({data, movieData}) => {
-    var mov = data.find(m => m.id == moviesList.title);
+    var mov = data.find(m => m.title == moviesList.title);
     var movieData;
 
     movieData = <div>
