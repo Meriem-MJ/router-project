@@ -4,15 +4,15 @@ import { moviesList } from '../assets/mookData';
 
 
 
-const Description = ({data, movieData}) => {
-    var mov = data.find(m => m.title == moviesList.title);
+const Description = () => {
+    var mov = moviesList.find(m => m.title == moviesList.title);
     var movieData;
 
     movieData = <div>
-      <h3> {mov.title} </h3>
+    <h3> {mov.title} </h3>
         {mov.Trailer}
-      <p>{mov.Synopsis}</p>
-      </div>;
+    <p>{mov.Synopsis}</p>
+    </div>;
 
     return (
         <div>
@@ -25,7 +25,7 @@ const Description = ({data, movieData}) => {
             </nav>
             <div className='container'>
                 {movieData}
-            </div>
+            </div> 
         </div>
     )
 }
