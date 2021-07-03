@@ -4,7 +4,7 @@ import { Card, CardTitle, CardImg, CardBody, CardText } from 'reactstrap';
 
 import Rate from './Rate';
 
-const MovieCard = ({ movie: { title, posterUrl, description, rate } }) => {
+const MovieCard = ({ movie: { title, posterUrl, description, rate }}) => {
   return (
     <div className='col-12 mr-4 mt-4'>
       <Card style={{ height: `550px` }}>

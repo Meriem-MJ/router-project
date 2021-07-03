@@ -4,13 +4,13 @@ import './App.css';
 import Home from './components/Home';
 import Description from './components/Description'
 
-function App() {
+function App(movieData) {
 
   return (
     <Router>
       <div>
         <Route path='/' exact component={Home}/>
-        <Route path='/Description/:title' component={Description} />
+        <Route path={`/:movieTitle`} render={ (props) => <Description data= {movieData} {...props} />}/>
       </div>
     </Router>
   );

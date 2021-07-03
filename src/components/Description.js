@@ -1,15 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { moviesList } from '../assets/mookData'
-import v5 from '.././video-5.mp4'
+import { moviesList } from '../assets/mookData';
 
 
 
-class Description extends Component {
-    constructor(props){
-        super(props);
-    }
-    render(){
+const Description = ({data, movieData}) => {
+    var mov = data.find(m => m.id == moviesList.title);
+    var movieData;
+
+    movieData = <div>
+      <h3> {mov.title} </h3>
+        {mov.Trailer}
+      <p>{mov.Synopsis}</p>
+      </div>;
+
     return (
         <div>
             <nav>
@@ -20,18 +24,10 @@ class Description extends Component {
                 </ul>
             </nav>
             <div className='container'>
-                
-                <h1>
-                {moviesList.map(active => active.title)}
-                </h1>
-                {moviesList.map(V => <video src={V.Trailer} autoPlay controls/>)}
-                <p>
-
-                </p>
+                {movieData}
             </div>
         </div>
     )
-}
 }
 
 export default Description
