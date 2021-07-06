@@ -1,17 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-import Description from './components/Description'
+import MovieDescription from './components/MovieDescription';
 
-function App(movieData) {
+function App() {
 
   return (
     <Router>
+      
       <div>
-        <Route path='/' exact component={Home}/>
-        <Route path={`/:movieTitle`} render={ (props) => <Description data= {movieData} {...props} />}/>
+        <Switch>
+          <Route path='/' exact component={Home}/>
+          <Route path='/movie/:id' component={MovieDescription}/>
+        </Switch>
       </div>
+      
     </Router>
   );
 }

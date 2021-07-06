@@ -8,7 +8,7 @@ const MoviesList = ({ moviesArray}) => {
   return (
         <div  className='row mt-2 justify-content-center'>
           {moviesArray.map((movie, key) => (
-         <Link to={`/${movie.title}`} style={{width:'33%'}}>
+         <Link to={{pathname:`/movie/${movie.id}`}} style={{width:'33%'}}>
             <MovieCard movie={movie} key={key} />
             </Link>
           ))}
